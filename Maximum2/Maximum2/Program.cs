@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Maximum2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c,max;
+            Console.WriteLine("Введите 3 числа:");
+            if (int.TryParse(Console.ReadLine(), out a) && int.TryParse(Console.ReadLine(), out b)
+                  && int.TryParse(Console.ReadLine(), out c))
+              {
+                  //максимальное значение
+                 max = (a >= b) ? a : b;
+                 max = (max >= c) ? max : c;
+                 max = ((max = (a >= b) ? a : b) >= c) ? max : c;
+                  // вывод результата
+                  Console.WriteLine("Максимальное = " + max);
+              }
+            else
+             {
+                 Console.WriteLine("Неверное значение! Нужно ввести целое число.");
+             };
+             // завершение программы
+             Console.ReadKey();
+         }
+        }
+    }
+
