@@ -17,7 +17,7 @@ namespace SumOfNumbers
                 int sum = 0; // сумма чисел 
                 int i = 0; // счетчик количетсва введенных чисел 
                 // N раз 
-                while (i< N)
+                do
                 {
                     Console.WriteLine("Введите число:");
                     // если введено корректное число
@@ -29,11 +29,12 @@ namespace SumOfNumbers
                         //*/
                         i++;
                     }
-                    else 
-                {
+                    else
+                    {
                         Console.WriteLine("Неверное значение! Введите целое число!");
                     };
-                };
+                }
+                while (i < N);
                 
                 // вывод результата
                 Console.WriteLine("Сумма: " + sum);
