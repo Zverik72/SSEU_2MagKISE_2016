@@ -8,25 +8,41 @@ namespace Maximum2
     {
         static void Main(string[] args)
         {
-            int a,b,c,max;
+            int a, b, c, max;
             Console.WriteLine("Введите 3 числа:");
-            if (int.TryParse(Console.ReadLine(), out a) && int.TryParse(Console.ReadLine(), out b)
-                  && int.TryParse(Console.ReadLine(), out c))
-              {
-                  //максимальное значение
-                 max = (a >= b) ? a : b;
-                 max = (max >= c) ? max : c;
-                 max = ((max = (a >= b) ? a : b) >= c) ? max : c;
-                  // вывод результата
-                  Console.WriteLine("Максимальное = " + max);
-              }
-            else
+             if (int.TryParse(Console.ReadLine(), out a) 
+                 && int.TryParse(Console.ReadLine(), out b) 
+                 && int.TryParse(Console.ReadLine(), out c))
              {
-                 Console.WriteLine("Неверное значение! Нужно ввести целое число.");
-             };
-             // завершение программы
-             Console.ReadKey();
-         }
+                 // если  А больше 
+                 if (a >= b)
+                 {
+                     max = a;
+                 }
+                 // иначе B больше
+                 else
+                 {
+                     max = b;
+                 };
+                 // если С больше максимального из А, В, то С- максимальное
+                if (C >= max)
+                 {
+                     max = c;
+ 
+                 };
+ 
+                 // Вывод результата 
+                        Console.WriteLine("Максимальное = " + max);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Неверное значение! Нужно ввести целое число.");
+                    };
+                    // завершение программы
+                    Console.ReadKey();
+                }
+            }
         }
-    }
 
+    }
+}
