@@ -14,19 +14,16 @@ namespace ArrayMax
             int n;
             do
             {
-                Console.Write("Введите длину массива: ");
               Console.Write("Введите длину массива: ");
             }
-            while
             while 
             (!int.TryParse(Console.ReadLine(), out n) || (n <= 0));
-            // инициализация массива 
+            // инициализация массива
             int[] a = new int[n];
+            // ввод значений массива
             int i = 0;
             while (i < n)
             {
-                Console.Write("Введите a[" + i + "]:");
-                if (int.TryParse(Console.ReadLine(), out a[i] ))
                 Console.Write("Введите a[" + i + "]: ");
                 if (int.TryParse(Console.ReadLine(), out a[i]))
                 {
@@ -44,7 +41,7 @@ namespace ArrayMax
             {
                if (a[i] == max)
                 {
-                  iMax = iMax + ", " + i;
+                  iMax = iMax + "," + i;
                   }
                else 
                if (a[i] > max)
@@ -53,7 +50,6 @@ namespace ArrayMax
                    iMax = i.ToString();
                 };
             };
-            // выход 
             //вывод результата
             Console.WriteLine("Максимальное значение a[" + iMax + "] = " + max);
             //выход из программы
